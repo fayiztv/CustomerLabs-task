@@ -22,3 +22,30 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+<Box sx={{ flexGrow: 1 }}>
+            <AppBar position="static">
+              <Toolbar>
+                <IconButton
+                  size="large"
+                  edge="start"
+                  color="inherit"
+                  aria-label="menu"
+                  sx={{ mr: 2 }}
+                  className="bold-icon"
+                  onClick={closeModal}
+                >
+                  <ArrowBackIos />
+                </IconButton>
+                <Typography
+                  variant="h6"
+                  align="left"
+                  component="div"
+                  sx={{ flexGrow: 1 }}
+                >
+                  View Audience
+                </Typography>
+              </Toolbar>
+            </AppBar>
+          </Box>
