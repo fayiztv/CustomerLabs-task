@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 import SaveSegment from "./components/SaveSegment";
-import SegmentForm from "./components/SegmentForm";
 import Modal from "./components/Modal/Modal";
 
 function App() {
