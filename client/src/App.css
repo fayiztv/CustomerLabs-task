@@ -1,24 +1,24 @@
 #root {
   width: 100vw;
-  height:100vh;
+  height: 100vh;
   text-align: center;
 }
-*{
+* {
   margin: 0;
 }
 
-.MuiPaper-root{
-  background-color: #39AFBC !important;
+.MuiPaper-root {
+  background-color: #39afbc !important;
 }
 
-.save-button{
+.save-button {
   color: white !important;
-  background-color: #39AFBC !important;
-  height:60px;
-  width:250px;
+  background-color: #39afbc !important;
+  height: 60px;
+  width: 250px;
 }
 
-.button-div{
-  margin:100px;
+.button-div {
+  margin: 100px;
   display: flex;
 }

@@ -35,18 +35,6 @@ const CustomModal = ({ isOpen, closeModal }) => {
     setSegmentName(event.target.value);
   };
 
-  //   const handleAddSchema = (event) => {
-  //     const newSelection = event.target.value;
-  //     setCurrentSelection(newSelection);
-  //     const selectedOption = schemas.find(
-  //       (schema) => schema.value === newSelection
-  //     );
-  //     if (selectedOption) {
-  //       setSelectedSchemas([...selectedSchemas, selectedOption]);
-  //       setSchemas(schemas.filter((schema) => schema.value !== newSelection));
-  //     }
-  //   };
-
   const handleAddSchema = (event) => {
     const newSelection = event.target.value;
     setCurrentSelection("");
@@ -70,29 +58,20 @@ const CustomModal = ({ isOpen, closeModal }) => {
   };
 
   const handleDeleteSchema = (key) => {
-    const {[key]: _, ...remainingSchemas} = selectedSchemas;
+    const { [key]: _, ...remainingSchemas } = selectedSchemas;
     setSelectedSchemas(remainingSchemas);
-    
-    const schemaToAddBack = initialSchemas.find(schema => schema.value === key);
-    if (schemaToAddBack && !schemas.some(schema => schema.value === key)) {
-      setSchemas([...schemas, schemaToAddBack].sort((a, b) => a.label.localeCompare(b.label)));
+
+    const schemaToAddBack = initialSchemas.find(
+      (schema) => schema.value === key
+    );
+    if (schemaToAddBack && !schemas.some((schema) => schema.value === key)) {
+      setSchemas(
+        [...schemas, schemaToAddBack].sort((a, b) =>
+          a.label.localeCompare(b.label)
+        )
+      );
     }
   };
-
-  //   const handleSubmit = async () => {
-  //     const payload = {
-  //       name: segmentName,
-  //       schemas: selectedSchemas.map(schema => schema.value),
-  //     };
-
-  //     try {
-  //       const response = await axios.post('https://webhook.site/a99abbfe-f6f7-4016-a25c-956ff299a658', payload);
-  //       console.log('Success:', response.data);
-  //       closeModal();
-  //     } catch (error) {
-  //       console.error('Error:', error.response ? error.response.data : error.message);
-  //     }
-  //   };
 
   const handleSubmit = async () => {
     const payload = {
@@ -103,7 +82,10 @@ const CustomModal = ({ isOpen, closeModal }) => {
     };
 
     try {
-      const response = await axios.post("https://webhook.site/a99abbfe-f6f7-4016-a25c-956ff299a658", payload);
+      const response = await axios.post(
+        "https://webhook.site/a99abbfe-f6f7-4016-a25c-956ff299a658",
+        payload
+      );
       closeModal();
       Swal.fire("Success!", "Schema Added Succesfully", "success");
     } catch (error) {
@@ -172,7 +154,7 @@ const CustomModal = ({ isOpen, closeModal }) => {
               <h4 className="dodts-text">- Group Traits</h4>
             </div>
             {Object.entries(selectedSchemas).map(([key, value]) => {
-              const schema = initialSchemas.find((s) => s.value === key); // Find the schema object to get the label
+              const schema = initialSchemas.find((s) => s.value === key);
               return (
                 <div className="schemas-div" key={key}>
                   <div

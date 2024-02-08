@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="main-div">
       <SaveSegment toggleModal={toggleModal} />
-      <Modal isOpen={isModalOpen} closeModal={toggleModal}/>
+      <Modal isOpen={isModalOpen} closeModal={toggleModal} />
     </div>
   );
 }

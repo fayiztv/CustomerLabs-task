@@ -16,19 +16,11 @@
   height: 100%;
   max-width: none;
   animation: slideUp 0.5s ease forwards;
-  /* overflow: scroll;
-  overflow-x: hidden;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  -ms-overflow-style: none;
-  scrollbar-width: none; */
 }
 
-.main-content{
-  height:550px;
-  width:100%;
+.main-content {
+  height: 550px;
+  width: 100%;
   overflow: scroll;
   overflow-x: hidden;
   &::-webkit-scrollbar {
@@ -136,7 +128,7 @@
   margin-top: 30px;
   margin-left: 30px;
 }
-.link-div{
+.link-div {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -144,11 +136,11 @@
   margin-left: 30px;
 }
 
-.link{
+.link {
   text-decoration: underline;
   font-family: sans-serif;
   color: #39afbc;
-  font-weight:900;
+  font-weight: 900;
   cursor: pointer;
 }
 
@@ -162,21 +154,21 @@
   border-radius: 50% !important;
 }
 
-.buttons-div{
+.buttons-div {
   display: flex;
   justify-content: start;
-  align-items:end;
+  align-items: end;
   margin-top: 30px;
   margin-left: 30px;
-  height:70px;
+  height: 70px;
 }
 
-.submit-button{
+.submit-button {
   background-color: #39afbc !important;
   color: #fff !important;
-  margin:10px !important;
-  width:150px;
-  height:50px;
+  margin: 10px !important;
+  width: 150px;
+  height: 50px;
 }
 
 @keyframes slideUp {
